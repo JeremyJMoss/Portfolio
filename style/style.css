@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Playfair+Display&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primaryColor: rgb(20, 187, 76);
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 10% 1fr;
+  background-color: #111;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.homeMain {
+  width: 90%;
+  margin: 10% auto;
+  display: flex;
+}
+
+.blinkingCursor {
+  animation: blink step-end infinite 1s;
+  font-size: 2.7rem;
+}
+
+@keyframes blink {
+  from,
+  to {
+    color: transparent;
+  }
+  50% {
+    color: white;
+  }
+}
+
+.typewriterContainer {
+  color: #39e600;
+  width: 100%;
+  font-size: 2rem;
+  font-family: "Oswald", serif;
+}
+
+#hamburgerMenu {
+  width: 35px;
+  margin: 15px;
+  cursor: pointer;
+}
+
+#hamburgerMenu img {
+  width: 100%;
+}
+
+.closeBtnSection {
+  display: flex;
+  justify-content: flex-end;
+  height: 20%;
+}
+
+.closeBtn {
+  font-size: 1.5rem;
+  color: white;
+  margin: 10px 10px 0 0;
+  cursor: pointer;
+}
+
+.pageLinks {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  background-color: #111;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px #333;
+}
+
+.pageLinks ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  width: 100%;
+  height: 60%;
+  flex-wrap: wrap;
+}
+
+.pageLinks ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 33%;
+  flex-basis: 40%;
+  gap: 5%;
+}
+
+.pageLinks ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  font-family: "Poppins", "sans-serif";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.plIcon {
+  margin-top: 0;
+  font-size: 2.5rem;
+  color: #39e600;
+  text-shadow: 0 0 4px #39e600;
+}
+
+.blackFadeBackground {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(3px);
+}
+
+.hide {
+  display: none;
+}
+
+.socialMediaLinks {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+.socialMediaLinks .fa {
+  font-size: 2rem;
+  color: white;
+  padding: 12px;
+}
+
+.socialMediaLinks .fa:hover,
+.socialLinks .fa:active {
+  text-shadow: 0 0 10px #39e600;
+}
+
+.homeHero {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeHeroName {
+  text-align: center;
+}
+
+.homeHeroName h1 {
+  margin-bottom: 5rem;
+  color: white;
+  font-size: 3.2rem;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+  font-family: "Playfair Display", serif;
+  line-height: 3rem;
+}
+
+.homeHeroName h1 .smallerText {
+  font-size: 1.9rem;
+  letter-spacing: 1px;
+}
+
+/*About page CSS*/
+.aboutMain {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutContainer {
+  width: 90%;
+}
+
+.codingBackground {
+  color: white;
+  padding-left: 10px;
+}
+
+.codingBackground h2 {
+  color: #39e600;
+  font-size: 1.5rem;
+  font-family: "Poppins", "sans-serif";
+}
+
+@media screen and (min-width: 540px) {
+  #hamburgerMenu {
+    display: none;
+  }
+
+  header {
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .pageLinks {
+    position: static;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: unset;
+    border-radius: none;
+  }
+
+  .pageLinks ul {
+    flex-wrap: nowrap;
+    width: 50%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .pageLinks ul li {
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+    flex-basis: unset;
+    gap: unset;
+    margin-inline: 10px;
+  }
+
+  .pageLinks ul li a {
+    margin-top: unset;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .pageLinks ul li a:hover {
+    text-shadow: 0px 0px 10px #39e600;
+  }
+
+  .socialMediaLinks {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .closeBtnSection {
+    display: none;
+  }
+
+  .plIcon {
+    display: none;
+  }
+  .blackFadeBackground {
+    display: none;
+  }
+
+  .homeHeroName h1 {
+    font-size: 4rem;
+    line-height: 4rem;
+    font-family: "Kaisei Tokumin", serif;
+  }
+
+  .homeHeroName h1 .smallerText {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .homeHeroName h1 {
+    font-size: 5rem;
+    line-height: 5rem;
+  }
+
+  .homeHeroName h1 .smallerText {
+    font-size: 2.8rem;
+  }
+
+  .blinkingCursor {
+    font-size: 4rem;
+  }
+
+  .typewriterContainer {
+    color: #39e600;
+    width: 100%;
+    font-size: 3rem;
+    font-family: "Oswald", serif;
+  }
+}
