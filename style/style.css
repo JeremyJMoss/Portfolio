@@ -1,10 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Playfair+Display&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+Tokumin&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 
 * {
   padding: 0;
@@ -34,9 +36,10 @@ header {
 }
 
 .homeMain {
-  width: 90%;
+  width: 100%;
   margin: 10% auto;
   display: flex;
+  justify-content: center;
 }
 
 .blinkingCursor {
@@ -86,10 +89,10 @@ header {
 
 .pageLinks {
   position: absolute;
-  width: 80%;
+  width: 90%;
   height: 80%;
   top: 10%;
-  left: 10%;
+  left: 5%;
   background-color: #111;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px #333;
@@ -110,14 +113,14 @@ header {
   justify-content: center;
   align-items: center;
   height: 33%;
-  flex-basis: 40%;
+  flex-basis: 50%;
   gap: 5%;
 }
 
 .pageLinks ul li a {
   text-decoration: none;
   color: white;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   font-family: "Poppins", "sans-serif";
   display: flex;
   flex-direction: column;
@@ -127,7 +130,8 @@ header {
 
 .plIcon {
   margin-top: 0;
-  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-size: 3rem;
   color: #39e600;
   text-shadow: 0 0 4px #39e600;
 }
@@ -137,7 +141,7 @@ header {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 100%;
-  backdrop-filter: blur(3px);
+  backdrop-filter: blur(4px);
 }
 
 .hide {
@@ -164,33 +168,62 @@ header {
 }
 
 .homeHero {
-  width: 100%;
+  width: 90%;
   height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .homeHeroName {
-  text-align: center;
+  text-align: left;
 }
 
 .homeHeroName h1 {
-  margin-bottom: 5rem;
+  margin-bottom: 0.5rem;
   color: white;
-  font-size: 3.2rem;
-  letter-spacing: 2px;
-  word-spacing: 3px;
-  font-family: "Playfair Display", serif;
-  line-height: 3rem;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+  line-height: 2.7rem;
+  position: relative;
+  z-index: -1;
 }
 
 .homeHeroName h1 .smallerText {
-  font-size: 1.9rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
 }
 
+.homeHeroName h1 .personName {
+  display: flex;
+  justify-content: center;
+}
+
+.typewriter {
+  text-align: right;
+}
+
+.quote {
+  width: 100%;
+  padding-block: 1rem;
+}
+
+.quote p {
+  color: white;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  font-family: "Roboto", sans-serif;
+}
+
+.quote p:nth-child(2) {
+  text-align: center;
+}
+
+.quote p:last-child {
+  text-align: right;
+}
 /*About page CSS*/
 .aboutMain {
   width: 100%;
@@ -202,18 +235,46 @@ header {
   width: 90%;
 }
 
-.codingBackground {
+.aboutMe {
   color: white;
   padding-left: 10px;
 }
 
-.codingBackground h2 {
+.aboutMe h2 {
   color: #39e600;
   font-size: 1.5rem;
   font-family: "Poppins", "sans-serif";
+  padding: 0.5rem 1rem 0.5rem 0;
 }
 
-@media screen and (min-width: 540px) {
+.aboutMe p {
+  padding-left: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+  word-spacing: 1px;
+}
+
+.aboutMe p:last-child {
+  padding-bottom: 2rem;
+}
+
+.aboutMe ul {
+  padding: 0 0 1rem 2rem;
+  list-style: none;
+}
+
+.aboutMe ul li::before {
+  content: "- ";
+  font-size: 1.5rem;
+  color: #39e600;
+}
+
+.aboutMe ul li {
+  font-size: 1.2rem;
+}
+
+@media screen and (min-width: 600px) {
   #hamburgerMenu {
     display: none;
   }
@@ -239,6 +300,7 @@ header {
     height: 100%;
     justify-content: flex-start;
     align-items: center;
+    margin-left: 1rem;
   }
 
   .pageLinks ul li {
@@ -247,7 +309,7 @@ header {
     height: 100%;
     flex-basis: unset;
     gap: unset;
-    margin-inline: 10px;
+    margin-inline: 8px;
   }
 
   .pageLinks ul li a {
@@ -267,6 +329,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    margin-right: 1rem;
   }
 
   .closeBtnSection {
@@ -281,13 +344,22 @@ header {
   }
 
   .homeHeroName h1 {
-    font-size: 4rem;
-    line-height: 4rem;
+    font-size: 3.6rem;
+    line-height: 3.7rem;
     font-family: "Kaisei Tokumin", serif;
   }
 
   .homeHeroName h1 .smallerText {
     font-size: 2rem;
+  }
+
+  .typewriterContainer {
+    font-size: 2.5rem;
+  }
+
+  .quote p {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 
