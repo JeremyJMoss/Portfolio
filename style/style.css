@@ -37,7 +37,7 @@ header {
 
 .homeMain {
   width: 100%;
-  margin: 10% auto;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
 }
@@ -378,9 +378,33 @@ header {
   }
 
   .typewriterContainer {
-    color: #39e600;
-    width: 100%;
     font-size: 3rem;
-    font-family: "Oswald", serif;
+  }
+
+  .quote p {
+    font-size: 2rem;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .homeHeroName h1 {
+    font-size: 5.5rem;
+    line-height: 6rem;
+  }
+
+  .homeHeroName h1 .smallerText {
+    font-size: 3.2rem;
+  }
+
+  .blinkingCursor {
+    font-size: 5.3rem;
+  }
+
+  .typewriterContainer {
+    font-size: 4rem;
+  }
+
+  .quote p {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
   }
 }
