@@ -278,8 +278,9 @@ header {
 .portfolioHeader {
   display: flex;
   justify-content: center;
-  color: #39e600;
+  color: white;
   font-family: "Poppins", "san-serif";
+  font-size: 2.5rem;
 }
 
 .projects {
@@ -296,16 +297,17 @@ header {
 }
 
 .sub-heading {
-  color: white;
-  font-size: 1.5rem;
+  color: #39e600;
+  font-size: 2rem;
   font-family: "Roboto", sans-serif;
   margin-block: 20px;
 }
 
 .description {
   color: white;
-  font-size: 1rem;
+  font-size: 1.3rem;
   margin-block: 20px;
+  font-family: "Roboto", sans-serif;
 }
 
 @media screen and (min-width: 600px) {
@@ -399,20 +401,20 @@ header {
 
 @media screen and (min-width: 1080px) {
   .homeHeroName h1 {
-    font-size: 5rem;
-    line-height: 5rem;
+    font-size: 4.6rem;
+    line-height: 4rem;
   }
 
   .homeHeroName h1 .smallerText {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 
   .blinkingCursor {
-    font-size: 4rem;
+    font-size: 4.25rem;
   }
 
   .typewriterContainer {
-    font-size: 3rem;
+    font-size: 3.5rem;
   }
 
   .quote p {
