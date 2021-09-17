@@ -238,6 +238,10 @@ header {
 .aboutMe {
   color: white;
   padding-left: 10px;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .aboutMe h2 {
@@ -250,9 +254,10 @@ header {
 .aboutMe p {
   padding-left: 1rem;
   font-family: "Roboto", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6rem;
-  word-spacing: 1px;
+  word-spacing: 1.5px;
+  align-self: center;
 }
 
 .aboutMe p:last-child {
